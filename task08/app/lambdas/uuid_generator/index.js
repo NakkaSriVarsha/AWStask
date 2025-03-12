@@ -33,7 +33,7 @@ export const handler = async (event) => {
         // Upload the file to S3
         await s3Client.send(command);
 
-        console.log(`Successfully uploaded UUIDs to S3: s3://${BUCKET_NAME}/${filename}`);
+        console.log(`Successfully uploaded UUIDs to S3: s3:/${BUCKET_NAME}/${filename}`);
 
         // No return statement needed for CloudWatch event triggers
     } catch (error) {
